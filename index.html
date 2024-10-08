@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8256b326d8.js" crossorigin="anonymous"></script>
+    <title>Peddy</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        "lato": ["Lato", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lato">
+    <header class=" max-w-screen-xl mx-auto min-h-screen mt-10 px-4 lg:px-0">
+        <nav class="flex justify-between items-center">
+            <div class="flex items-center justify-center gap-2">
+                <img class="w-8 h-8" src="./images/logo.webp" alt="">
+                <span class=" text-3xl text-neutral-950 font-extrabold">Peddy</span>
+            </div>
+            <ul class="flex gap-8">
+                <li class=" text-base font-normal cursor-pointer">Home</li>
+                <li class=" text-base font-normal cursor-pointer">Shop</li>
+                <li class=" text-base font-normal cursor-pointer">Contact</li>
+            </ul>
+            <div
+                class=" w-14 h-14 rounded-full border-2 cursor-pointer hover:bg-cyan-600 hover:text-white flex justify-center items-center">
+                <i class="fa-regular fa-user text-xl"></i>
+            </div>
+        </nav>
+        <!-- hero -->
+        <div class="flex flex-col justify-center items-center mt-16 max-w-screen-xl">
+            <div class="text-center">
+                <div class=" max-w-xl lg:ml-20 ml-0 ">
+                    <h2 class="text-xl font-bold mb-6 text-neutral-500">Bringing Families Together ❤️‍🔥 </h2>
+                    <h1 class="lg:text-5xl text-3xl font-extrabold text-neutral-950"> Your Path to Adoption Starts Here
+                    </h1>
+                    <p class="py-6">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                    </p>
+                    <button class="btn bg-cyan-700 text-xl hover:bg-cyan-800 px-6 text-white"><a
+                            href="#main-container">View More</a></button>
+                </div>
+            </div>
+            <div class="mt-14">
+                <img class="w-full" src="./images/pet.webp" alt="">
+            </div>
+        </div>
+    </header>
+    <main id="main-container" class="max-w-screen-xl mx-auto min-h-screen mt-10 px-4 lg:px-0">
+        <div class="text-center mt-10">
+            <h3 class=" text-4xl font-extrabold text-neutral-950 mb-6">Adopt Your Best Friend</h3>
+            <p class=" text-base font-normal text-neutral-950/70">It is a long established fact that a reader will be
+                distracted by the readable content of a <br> page when looking at its layout. The point of using Lorem
+                Ipsum is that it has a.</p>
+        </div>
+        <!-- buttons -->
+        <div id="categoryContainer" class="mt-12 flex flex-col lg:flex-row  justify-between gap-6">
+
+        </div>
+        <!-- sorts -->
+        <div class="mt-8 flex justify-between items-center">
+            <h3 class=" text-2xl font-bold text-neutral-950">Best Deal For you</h3>
+            <button onclick="sortByPrice()" class="btn bg-cyan-700 text-xl hover:bg-cyan-800 px-6 text-white">Sort by Price</button>
+        </div>
+        <!-- cards -->
+        <div class="mt-12  grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <div id="petsContainer"
+                class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 border-2 rounded-xl col-span-0 lg:col-span-3">
+                <!-- <div class="flex justify-center">
+                    <span id="spinner" class=" block loading loading-bars loading-lg"></span>
+                </div> -->
+              
+            </div>
+            <div class=" col-span-1">
+                <div class="border-2 rounded-xl p-4 min-h-screen">
+                    <div id="like-container" class=" grid gap-4 grid-cols-2 ">
+                        <!-- <img  class="w-full rounded-lg border-2 p-2"
+                        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class=" max-w-screen-2xl mt-8 bg-black min-h-[450px]">
+        <div
+            class="pt-[100px] pb-14 px-4 lg:px-0 max-w-screen-xl text-white mx-auto flex gap-4 items-center flex-col lg:flex-row justify-between">
+            <div class="">
+                <div class="flex  gap-2">
+                    <img class="w-8 h-8" src="./images/logo.webp" alt="">
+                    <span class=" text-3xl text-white font-extrabold">Peddy</span>
+                </div>
+                <address class="text-white mt-6">
+                    <p class=" text-white/70">Location: av. Washington 165, NY CA 54003</p>
+                    <p class=" text-white/70">Phone: +31 85 964 47 25</p>
+                    <p class=" text-white/70">Email: info@yourdomain.com</p>
+                    <p class=" text-white/70">Openings hours: 9.00 AM - 5.00 PM</p>
+                </address>
+                <div class="flex items-center mt-2 gap-4">
+                    <img class="w-10 h-10 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="">
+                    <img class="w-10 h-10 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=yoQabS8l0qpr&format=png&color=000000" alt="">
+                    <img class="w-10 h-10 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="">
+                    <img class="w-10 h-10 cursor-pointer"
+                        src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="">
+                </div>
+            </div>
+            <div class="">
+                <h3 class=" mb-4 text-lg font-semibold">Useful links</h3>
+                <ul class="flex flex-col gap-2">
+                    <li class=" cursor-pointer text-white/70">Home</li>
+                    <li class=" cursor-pointer text-white/70">About Us</li>
+                    <li class=" cursor-pointer text-white/70">Animals</li>
+                    <li class=" cursor-pointer text-white/70">Foundation</li>
+                    <li class=" cursor-pointer text-white/70">Contact</li>
+                </ul>
+            </div>
+            <div class="">
+                <h3 class=" text-lg font-semibold">Drop a Message</h3>
+                <div class="flex flex-col gap-4 mt-6">
+                    <input class="p-3 bg-neutral-800 rounded-lg" type="text" placeholder="Enter your email">
+                    <button class="btn bg-cyan-700 border-none hover:bg-cyan-900 px-6 text-white">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- pet details modal -->
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn hidden" onclick="detailsModal.showModal()">open modal</button>
+    <dialog id="detailsModal" class="modal">
+        <div class="modal-box max-w-screen-md">
+            <form method="dialog" class="m-4">
+                <button class="btn btn-sm btn-circle btn-ghost absolute text-red-500 text-lg right-2 top-2">✕</button>
+            </form>
+            <div id="modal-content" class="card card-compact border-2 p-4">
+
+            </div>
+        </div>
+    </dialog>
+
+    <!-- adopt modal -->
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn hidden" onclick="adoptButton.showModal()">open modal</button>
+    <dialog id="adoptButton" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+           <div id="Congrats" class="flex flex-col justify-center items-center">
+                <img src="https://img.icons8.com/?size=100&id=q6BlPrJZmxHV&format=png&color=000000" alt="">
+                <p class="text-4xl font-extrabold text-neutral-800 tracking-wider">Congrats</p>
+                <p class=" text-neutral-700 font-semibold">Adoption process start for your pet</p>
+                <p class=" text-6xl font-extrabold text-neutral-950" id="countdown">3</p>
+           </div>
+        </div>
+    </dialog>
+    <script src="./script.js"></script>
+</body>
+
+</html>
